@@ -26,7 +26,13 @@ class ForComprehensionTask {
   /**
    * Задача по дешугарингу (Desugaring task)
    */
-  def safeDivideWithFor(opt1: Option[Int], opt2: Option[Int]): Option[Int] = ???
+  def safeDivideWithFor(opt1: Option[Int], opt2: Option[Int]): Option[Int] =
+    for {
+    a <- opt1
+    b <- opt2
+    if b != 0
+    c = a / b
+  } yield c
 
   val answer: List[Answer]= ???
 

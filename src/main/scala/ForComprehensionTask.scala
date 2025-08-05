@@ -34,7 +34,7 @@ class ForComprehensionTask {
     c = a / b
   } yield c
 
-  val answer: List[Answer]= ???
+  val answer: List[Answer] = Nil
 
   sealed trait Answer
   final case object FlatMap extends Answer
